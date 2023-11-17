@@ -14,7 +14,7 @@ exports.server = server;
 const io = new socket_io_1.Server(server);
 exports.io = io;
 app.use((0, cors_1.default)({
-    origin: 'https://front-end-chat-67re-rmmt7lo0a-biel192501ma.vercel.app',
+    origin: 'https://front-end-chat-67re-biel192501ma.vercel.app',
     methods: ['GET', 'POST'],
     credentials: true,
 }));
