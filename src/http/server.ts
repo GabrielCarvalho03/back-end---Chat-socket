@@ -1,23 +1,19 @@
 import  Express  from "express";
 import { Server } from "socket.io";
 import { createServer} from 'http'
-import cors from 'cors'
 
 const app = Express()
 
-app.use(cors({
-    origin: 'https://front-end-chat-67re.vercel.app',
-    methods: ['GET', 'POST'],
-    credentials: true,
-  }));
-  
 
 
 
 
 const server = createServer(app)
 
-const io = new Server(server)
+const io = new Server(server, {cors:{
+    origin:"https://front-end-chat-67re.vercel.app",
+    
+}})
 
 
 
