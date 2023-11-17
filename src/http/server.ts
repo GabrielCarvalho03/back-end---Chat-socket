@@ -4,16 +4,22 @@ import { createServer} from 'http'
 import cors from 'cors'
 
 const app = Express()
-const server = createServer(app)
-
-const io = new Server(server)
 
 app.use(cors({
-    origin: 'https://front-end-chat-67re-biel192501ma.vercel.app',
+    origin: 'https://front-end-chat-67re.vercel.app',
     methods: ['GET', 'POST'],
     credentials: true,
   }));
   
+
+
+
+
+const server = createServer(app)
+
+const io = new Server(server)
+
+
 
 io.on('connection', socket =>{
     // console.log('user conected', socket.id)
