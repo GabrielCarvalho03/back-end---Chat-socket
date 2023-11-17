@@ -11,8 +11,9 @@ const app = Express()
 const server = createServer(app)
 
 const io = new Server(server, {cors:{
-    origin:"https://front-end-chat-67re.vercel.app",
-    
+    origin:"https://front-end-chat-67re.vercel.app", 
+    methods:['GET', 'POST']
+
 }})
 
 
