@@ -10,7 +10,7 @@ const http_1 = require("http");
 const app = (0, express_1.default)();
 const server = (0, http_1.createServer)(app);
 exports.server = server;
-const io = new socket_io_1.Server(server, { cors: { origin: 'http://127.0.0.1:5173' } });
+const io = new socket_io_1.Server(server, { cors: { origin: 'https://front-end-chat-67re-rmmt7lo0a-biel192501ma.vercel.app' }, });
 exports.io = io;
 io.on('connection', socket => {
     // console.log('user conected', socket.id)

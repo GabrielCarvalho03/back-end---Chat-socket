@@ -5,7 +5,7 @@ import { createServer} from 'http'
 const app = Express()
 const server = createServer(app)
 
-const io = new Server(server , {cors : {origin: 'https://front-end-chat-67re-34lmw1dj6-biel192501ma.vercel.app'}})
+const io = new Server(server , {cors : {origin: 'https://front-end-chat-67re-rmmt7lo0a-biel192501ma.vercel.app'},} , )
 
 io.on('connection', socket =>{
     // console.log('user conected', socket.id)
