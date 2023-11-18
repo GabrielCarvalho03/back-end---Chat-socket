@@ -1,6 +1,6 @@
 import { server } from "./http/server"
 import '../src/websocket/chat'
-import '../Db'
+import './models/Db'
 import Express from "express";
 
 const port = process.env.PORT || 3333;
