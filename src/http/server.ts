@@ -10,11 +10,13 @@ const server = createServer(app)
 
 const io = new Server(server)
 
+const port = process.env.PORT || 3333;
+
 io.on('connection', socket => {
     // console.log('user conected', socket.id)
 })
 
-app.listen(3333, () => {
+app.listen(Number(port),"0.0.0.0", () => {
     console.log('server is running')
 })
 
