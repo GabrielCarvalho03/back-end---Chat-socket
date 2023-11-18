@@ -1,29 +1,21 @@
-import  Express  from "express";
+import Express from "express";
 import { Server } from "socket.io";
-import { createServer} from 'http'
+import { createServer } from 'http'
+import cors from 'cors'
 
 const app = Express()
-
-
-
-
+app.use(cors())
 
 const server = createServer(app)
 
-const io = new Server(server, {cors:{
-    origin:"https://front-end-chat-67re.vercel.app", 
-    methods:['GET', 'POST']
+const io = new Server(server)
 
-}})
-
-
-
-io.on('connection', socket =>{
+io.on('connection', socket => {
     // console.log('user conected', socket.id)
 })
 
-app.listen(3333, ()=>{
+app.listen(3333, () => {
     console.log('server is running')
 })
 
-export { server , io}
+export { server, io }
