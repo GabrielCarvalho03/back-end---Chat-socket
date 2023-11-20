@@ -9,12 +9,14 @@ const userSchema = new Schema({
 
     socketId: String,
     name: String ,
+    userName: String ,
     email: {
         type: String,
         require: true,
         unique: true
     },
-    photo: String
+    photo: String,
+    password: String,
 
 })
 
