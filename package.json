@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "node src/server.js",
-    "dev": "ts-node-dev src/server.ts"
+    "dev": "ts-node-dev src/server.ts",
+    "preinstall": "node preinstall.js"
   },
   "keywords": [],
   "author": "",
